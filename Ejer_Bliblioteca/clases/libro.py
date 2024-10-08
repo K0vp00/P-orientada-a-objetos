@@ -1,7 +1,7 @@
 from autor import Autor
 class Libro(Autor):
     def __init__(self,isbn, titulo, nombre,id_autor, biografia, año, formato, n_pag, idioma_libro, genero_libro, categoria_libro):
-        Autor.__init__(self,id_autor,nombre,biografia)
+        super.__init__(self,id_autor,nombre,biografia)
         self.isbn = isbn
         self.titulo = titulo
         self.año = año
