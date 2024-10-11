@@ -3,9 +3,9 @@ from usuario import Usuario
 from disponibilidad_libro import disponibilidadLibro
 from datetime import datetime #se importa la biblioteca datatime
 class Prestamo(Libro,Usuario,disponibilidadLibro):
-    def __init__(self, id_prestamo,fecha_prestamo,fecha_estimada, fecha_devolucion,dias_retraso, nombre,us_estado , isbn, titulo,cantidad_libro):
+    def __init__(self, id_prestamo,fecha_prestamo,fecha_estimada, fecha_devolucion,dias_retraso,id_usuario , nombre,us_estado , isbn, titulo,cantidad_libro):
         #Clases padres (Usuario,Libro,disponibilidadLibro) y atributos heredados, se aplica herencia múltiple
-        Usuario.__init__(self,nombre,us_estado)
+        Usuario.__init__(self,id_usuario,nombre,us_estado)
         Libro.__init__(self,isbn, titulo)
         disponibilidadLibro.__init__(self,cantidad_libro)
         self.id_prestamo = id_prestamo #atributo adicional de la clase
