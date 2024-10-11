@@ -4,10 +4,10 @@ class Usuario(Contacto):
     def __init__(self, id_usuario, nombre, us_estado, cod_credencial,correo, telefono):
         #Clases padres (Contacto) y atributos heredados, se aplica herencia simple
         super().__init__(self, telefono, correo) 
-        self.id_usuario = id_usuario #atributo adicional de la clase
-        self.nombre = nombre 
-        self.us_estado = us_estado 
-        self.cod_credencial = cod_credencial 
+        self._id_usuario = id_usuario #atributo adicional encapsulacion (privada) solo contiene un _ en cambio __ seria muy privada y no nos dejaria manipular o heredar el atributo
+        self._nombre = nombre 
+        self._us_estado = us_estado 
+        self._cod_credencial = cod_credencial 
         
     # metodo para cambiar el estado a un usuario    
     def cambiarEstado(self):
