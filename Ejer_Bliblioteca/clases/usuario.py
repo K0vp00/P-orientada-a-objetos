@@ -1,11 +1,9 @@
 from contacto import Contacto #importa la clase para heredar los atributos
-from libro import Libro 
 from Constantes import estado #importa el diccionario que esta en el archivo constantes
-class Usuario(Contacto,Libro):
+class Usuario(Contacto):
     def __init__(self, id_usuario, nombre,titulo, us_estado, cod_credencial,correo, telefono):
-        #Clases padres (Contacto,Libro) y atributos heredados, se aplica herencia múltiple
-        Contacto.__init__(self, telefono, correo) 
-        Libro.__init__(self,titulo)
+        #Clases padres (Contacto) y atributos heredados, se aplica herencia simple
+        super().__init__(self, telefono, correo) 
         self.id_usuario = id_usuario #atributo adicional de la clase
         self.nombre = nombre 
         self.us_estado = us_estado 
