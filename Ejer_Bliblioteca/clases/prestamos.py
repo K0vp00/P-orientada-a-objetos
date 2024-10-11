@@ -1,7 +1,6 @@
 from libro import Libro #importa la clase para heredar los atributos
 from usuario import Usuario
 from disponibilidad_libro import disponibilidadLibro
-from Gestor_prestamos import gestorPrestamos
 from datetime import datetime #se importa la biblioteca datatime
 class Prestamo(Libro,Usuario,disponibilidadLibro):
     def __init__(self, id_prestamo,fecha_prestamo,fecha_estimada, fecha_devolucion,dias_retraso, nombre,us_estado , isbn, titulo,cantidad_libro):
